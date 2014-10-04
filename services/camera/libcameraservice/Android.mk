@@ -56,7 +56,7 @@ LOCAL_C_INCLUDES += \
     external/jpeg
 
 
-LOCAL_CFLAGS += -Wall -Wextra
+LOCAL_CFLAGS += -Wall -Wextra -fno-strict-aliasing
 
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
     LOCAL_CFLAGS += -DCAMERA_MSG_MGMT
