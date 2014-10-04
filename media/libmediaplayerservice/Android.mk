@@ -53,10 +53,7 @@ LOCAL_C_INCLUDES :=                                                 \
     $(TOP)/frameworks/native/include/media/openmax                  \
     $(TOP)/external/tremolo/Tremolo                                 \
 
-ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-    LOCAL_C_INCLUDES += \
-        $(call project-path-for,qcom-media)/mm-core/inc
-endif
+LOCAL_CFLAGS := -fno-strict-aliasing
 
 LOCAL_MODULE:= libmediaplayerservice
 
